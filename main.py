@@ -5,7 +5,7 @@ from Parsers.nytimes import scrape_nytimes_homepage
 from Parsers.bluesky_scraper import scrape_bluesky_posts
 from Parsers.DrudgeReport import scrape_drudge
 from Parsers.x import find_posts
-from CommonAI.Attention import get_parent_articles_with_articles
+from CommonAI.Attention import searchXTweets
 
 GRAPHQL_ENDPOINT = "http://localhost:4000/graphql"
 ARTICLE_LIMIT = 3
@@ -52,6 +52,6 @@ if __name__ == "__main__":
     # asyncio.run(main())
     # asyncio.run(scrape_nytimes_homepage()) 
     # asyncio.run(scrape_drudge())
-    asyncio.run(get_parent_articles_with_articles())
+    asyncio.run(searchXTweets())
     # asyncio.run(find_posts("Israel embassy"))
     # asyncio.run(scrape_bluesky_posts())
